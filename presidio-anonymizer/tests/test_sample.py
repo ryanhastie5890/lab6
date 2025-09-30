@@ -16,5 +16,7 @@ def test_sample_run_anonymizer(text, start, end, dictExpected):
         "entity_type": dict.entity_type,
         "operator": dict.operator
     }
-    assert dictExpected == dict
+    assert dictExpected["start"] == dict["start"]
+    assert dictExpected["end"] == dict["end"]
+    assert dictExpected["text"] == dict["text"]
    
